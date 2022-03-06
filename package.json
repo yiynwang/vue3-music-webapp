@@ -1,0 +1,36 @@
+{
+  "name": "vue-next-music",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "server": "node ./backend/dev.server.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@better-scroll/observe-dom": "^2.4.2",
+    "@better-scroll/pull-up": "^2.4.2",
+    "@better-scroll/slide": "^2.4.2",
+    "axios": "^0.24.0",
+    "compression": "^1.7.4",
+    "create-keyframe-animation": "^0.1.0",
+    "express": "^4.17.2",
+    "good-storage": "^1.1.1",
+    "lyric-parser": "^1.0.1",
+    "throttle-debounce": "^3.0.1",
+    "vue": "^3.2.25",
+    "vue-router": "4",
+    "vue3-lazy": "^1.0.0-alpha.1",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "cookie-parser": "^1.4.5",
+    "js-base64": "^3.6.0",
+    "pinyin": "^2.9.1",
+    "sass": "^1.47.0",
+    "vite": "^2.7.2",
+    "xsrf": "^1.0.0"
+  }
+}
