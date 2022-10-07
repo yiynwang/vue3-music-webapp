@@ -7,7 +7,7 @@
     "prod:server": "node ./backend/prod.server.js --host",
     "build": "vite build",
     "preview": "vite preview",
-    "oss:script": "node ./scripts/uploadOSS.js"
+    "oss:script": "node ./scripts/uploadOSS.mjs"
   },
   "dependencies": {
     "@better-scroll/core": "^2.4.2",

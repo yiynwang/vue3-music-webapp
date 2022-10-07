@@ -4,12 +4,12 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base: "https://vue-music-app.oss-cn-hangzhou.aliyuncs.com", // 静态资源访问路径
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
   },
-  base: "https://vue-music-app.oss-cn-hangzhou.aliyuncs.com", // 静态资源访问路径
   css: {
     preprocessorOptions: {
       scss: {
