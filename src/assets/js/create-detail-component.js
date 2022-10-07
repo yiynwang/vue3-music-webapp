@@ -52,6 +52,7 @@ export default function createdDetailComponent({ name, key, featch }) {
         this.$router.push(path);
         return;
       }
+      this.loading = true;
       const respone = await featch(computedData);
       const songs = await processSongs(respone.songs);
       this.loading = false;
