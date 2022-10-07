@@ -10,4 +10,4 @@ services:
         - ACCESS_KEY_SECRET
         - ENDPOINT=oss-cn-hangzhou.aliyuncs.com
     ports:
-      - 8080:9090
+      - 80:9090
