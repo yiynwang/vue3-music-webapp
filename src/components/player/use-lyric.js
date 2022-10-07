@@ -18,8 +18,8 @@ export default function useLyirc({ songReady, currentTime }) {
     stopLyric();
     currentLyric.value = null;
     currentLineNum.value = 0;
-    playingLyric.value = ""
-    purMusicLyric.value = ""
+    playingLyric.value = "";
+    purMusicLyric.value = "";
     const lyric = await getLyric(newSong);
     store.commit("addSongLyric", { song: newSong, lyric });
     if (currentSong.value.lyric !== lyric) return;
@@ -30,12 +30,12 @@ export default function useLyirc({ songReady, currentTime }) {
         playLyric();
       }
     } else {
-        purMusicLyric.value = lyric.replce(/(\d{2}):(\d{2}):(\d{2})/g,"")
+      purMusicLyric.value = lyric.replce(/(\d{2}):(\d{2}):(\d{2})/g, "");
     }
   });
-  function handleLyric({ lineNum,txt }) {
+  function handleLyric({ lineNum, txt }) {
     currentLineNum.value = lineNum;
-    playingLyric.value = txt
+    playingLyric.value = txt;
     const scrollCom = lyricScrollRef.value;
     const listEl = lyricListRef.value;
     if (!listEl) {
@@ -68,6 +68,6 @@ export default function useLyirc({ songReady, currentTime }) {
     lyricListRef,
     stopLyric,
     purMusicLyric,
-    playingLyric
+    playingLyric,
   };
 }

@@ -2,10 +2,12 @@
   "name": "vue-next-music",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "server": "node ./backend/dev.server.js",
+    "dev": "vite --host",
+    "dev:server": "node ./backend/dev.server.js --host",
+    "prod:server": "node ./backend/prod.server.js --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "oss:script": "node ./scripts/uploadOSS.js"
   },
   "dependencies": {
     "@better-scroll/core": "^2.4.2",

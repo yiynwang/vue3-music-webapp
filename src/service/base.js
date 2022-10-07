@@ -1,6 +1,6 @@
 import axios from "axios";
 const ERR_OK = 0;
-const baseURL = process.env.NODE_ENV === "development" ? "/" : "your urk";
+const baseURL = process.env.NODE_ENV === "development" ? "/" : "/";
 axios.defaults.baseURL = baseURL;
 
 export function get(url, params) {
