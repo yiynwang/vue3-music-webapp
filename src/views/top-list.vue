@@ -2,22 +2,13 @@
   <div class="top-list" v-loading="loading">
     <scroll class="top-list-content">
       <ul>
-        <li
-          class="item"
-          v-for="item in topList"
-          :key="item.id"
-          @click="onSelect(item)"
-        >
+        <li class="item" v-for="item in topList" :key="item.id" @click="onSelect(item)">
           <div class="icon">
             <img :src="item.pic" width="100" height="100" />
           </div>
           <div class="song-list">
-            <div
-              class="song"
-              v-for="(song, sIndex) in item.songList"
-              :key="song.id"
-            >
-              {{ sIndex + 1 }}·{{ item.name }}
+            <div class="song" v-for="(song, sIndex) in item.songList" :key="song.id">
+              {{ sIndex + 1 }}·{{ song.songName }}
             </div>
           </div>
         </li>
@@ -72,18 +63,22 @@ export default {
   width: 100%;
   top: 88px;
   bottom: 0;
+
   .top-list-content {
     overflow: hidden;
     height: 100%;
+
     .item {
       display: flex;
       height: 100px;
       margin: 0 20px;
       margin-top: 20px;
+
       .icon {
         width: 100px;
         height: 100px;
       }
+
       .song-list {
         display: flex;
         flex: 1;
@@ -93,11 +88,13 @@ export default {
         font-size: $font-size-small;
         color: $color-text-d;
         background-color: $color-highlight-background;
+
         .song {
           @include no-wrap();
           line-height: 26px;
         }
       }
+
       &:last-of-type {
         padding-bottom: 20px;
       }
